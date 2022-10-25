@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    gap: 5%;
+}
+
+.flex2 {
+    margin-top: 2%;
+    margin-right: 5%;
+    gap: 5%;
+}
+
+.lead {
+    text-align: center;
+}

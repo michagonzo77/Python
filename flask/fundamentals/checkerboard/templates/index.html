@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboard Michael Gonzalez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <style>
+        h1{
+            color: {{ color1 }};
+            background-color: {{ color2 }};
+        }
+        .color1 {
+            background-color: {{ color1 }};
+        }
+        .color2 {
+            background-color: {{ color2 }};
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>***Checkerboard***</h1>
+    </div>
+    <table>
+    <!-- Loops through Y inputed from User or Default Value -->
+    {% for i in range (y) %}
+        <tr>
+            <!-- Loops through X inputed from User or Default Value -->
+            {% for j in range (x) %}
+            {% if (i+j) is divisibleby 2 %}
+            <td class="color1"></td>
+            {% else %}
+            <td class="color2"></td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground Michael Gonzalez</title>
+    <style>
+        .box {
+            background-color: var(--color);
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+        }
+        #flex {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <div id="flex">
+        {% for x in range (num) %}
+        <div class="box" style="--color: {{ color }}">
+            
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

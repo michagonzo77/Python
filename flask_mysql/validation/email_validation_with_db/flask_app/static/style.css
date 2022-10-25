@@ -1,0 +1,15 @@
+.box {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+}
+
+.notvalid {
+    background-color: red;
+    color: white;
+}
+
+.green {
+    background-color: green;
+}

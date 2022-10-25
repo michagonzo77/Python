@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="box2 border border-dark">
+        <h3>Submitted Info:</h3>
+        <div class="d-flex">
+            <p class="mr-auto p-2">Name:</p>
+            <p class="mr-auto p-2">{{session['name']}}</p>
+        </div>
+        <div class="d-flex">
+            <p class="mr-auto p-2">Dojo Location:</p>
+            <p class="mr-auto p-2">{{session['location']}}</p>
+        </div>
+        <div class="d-flex">
+            <p class="mr-auto p-2">Favorite Language:</p>
+            <p class="mr-auto p-2">{{session['language']}}</p>
+        </div>
+        <div class="d-flex">
+            <p class="mr-auto p-2">Comment:</p>
+            <p class="mr-auto p-2">{{session['comment']}}</p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="flex">
+        <div id="left">
+            <div id="header">
+                <h1 class="display-1">Real Visits</h1>
+            </div>
+            <div>
+                <p class="lead"><span class="visual_count">{{session.visits}}</span> times</p>
+            </div>
+        </div>
+        <div id="right">
+            <div id="header">
+                <h1 class="display-1">Your Counter</h1>
+            </div>
+            <div>
+                <p class="lead"><span class="visual_count">{{session.fake}}</span> times</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex2">
+        <div class="box">
+            <a href={{url_for('index')}} class="btn btn-success">Refresh</a>
+        </div>
+        <div class="box">
+            <a href={{url_for('double')}} class="btn btn-info">Add two visits</a>
+            <a href={{url_for('destroy_sesh')}} class="btn btn-danger">Reset</a>
+        </div>
+        <div class="box">
+            <form action='/custom' method='post'>
+                <label for='customcount'>Add Custom Number to Count:</label>
+                <input type='text' name='customcount'>
+                <input type='submit' value='Add To Count'>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
